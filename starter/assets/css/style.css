@@ -7,4 +7,20 @@
     background: url(../img/cover/cover-scrum-board.png) no-repeat fixed;
     background-size: 360px;
     background-position: right bottom;
+    background-color: #FAF6EF;
+}
+
+.cart{
+    background-color:#FAF7F0;;
+}
+
+.high{
+    background-color:#D9CDB8;
+}
+
+.bug{
+    border-color:#D9CDB8;
+}
+.btnb{
+    background-color: #D9CDB8;
 }
