@@ -11,7 +11,11 @@
 }
 
 .cart{
-    background-color:#FAF7F0;;
+    background-color:#FAF7F0;
+}
+
+.cart:hover{
+    background-color: #dfdcd4;
 }
 
 .high{
@@ -21,6 +25,21 @@
 .bug{
     border-color:#D9CDB8;
 }
-.btnb{
-    background-color: #D9CDB8;
+
+li a{
+    text-decoration: none;
+    color:black;
+}
+
+li a:hover{
+     background-color:#D9CDB8; 
+     color: white;
+
+}
+li a:active{
+    font-weight: bold;
+}
+
+.modal_body{
+    background-color: #E9ECE1;
 }
