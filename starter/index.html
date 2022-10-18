@@ -37,12 +37,12 @@
 				</div>
 				
 				<div class="">
-					<button type="button" class="btn high text-white p-2 rounded-4 " data-toggle="modal" data-target="#exampleModal"><i class="bi bi-plus"></i> Add Task</button>
-					<div class="modal fade shadow-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<button type="button" class="btn high text-white p-2 rounded-4 " data-toggle="modal" data-target="#Modal"><i class="bi bi-plus"></i> Add Task</button>
+					<div class="modal fade shadow-sm" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 						  <div class="modal-content">
 							<div class="modal-header high">
-							  <h5 class="modal-title" id="exampleModalLabel">Add task</h5>
+							  <h5 class="modal-title" id="ModalLabel">Add task</h5>
 							  <button type="button" class="close high" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							  </button>
@@ -50,30 +50,32 @@
 							<div class="modal-body modal_body">
 							  <form action="" id="first" class="d-block fw-bold">
 								<label for="titre" class="d-block">titre:</label>
-								<input class="form-control input-sm m-1 cart shadow-sm" type="text" name="titre" id="titre" required>
+								<input class="form-control input-sm m-1 cart shadow-sm" type="text" name="title" id="title" value="title" required>
 							  </br>
 								<label for="type" class="d-block">type:</label>
 								<div class="form-check">
-								<input class="form-check-input mx-2 cart shadow-sm" type="radio" name="type" id="type" value="1" selected>
+								<input class="form-check-input mx-2 cart shadow-sm" type="radio" name="type" id="type" value="feature" selected>
 								<label class="form-check-label">high</label>
 							    </div>
 							    <div class="form-check">
-								<input class="form-check-input mx-2 cart shadow-sm" type="radio" name="type" id="type" value="2">
+								<input class="form-check-input mx-2 cart shadow-sm" type="radio" name="type" id="type" value="bug">
 								<label class="form-check-label">feature</label>
 							    </div>
 							</br>
 								<label for="propriete" class="d-block">propriete:</label>
-								<select class="form-select form-select-sm m-1 cart shadow-sm" name="propriete" id="propriete" >
+								<select class="form-select form-select-sm m-1 cart shadow-sm" name="priority" id="priority" >
 									<option value="1" selected>----please select----</option>
-									<option value="2"></option>
-									<option value="3"></option>
+									<option value="high">high</option>
+									<option value="medium">medium</option>
+									<option value="simple">simple</option>
 								</select>
 							</br>
 								<label for="status" class="d-block">status:</label>
 								<select class="form-select form-select-sm m-1 cart shadow-sm" name="status" id="status" required>
 									<option value="1" selected>----please select----</option>
-									<option value="2"></option>
-									<option value="3"></option>
+									<option value="to do">to do</option>
+									<option value="in Progress">in progress</option>
+									<option value="done">done</option>
 								</select>
 							</br>
 								<label for="date" class="d-block" >date:</label>
@@ -95,13 +97,14 @@
 			</div>
 			
 			<div class="d-flex flex-wrap justify-content-around  ">
-				<div class="container-fluid mt-5 col-lg-4 col-md-6 ">
+				<div class="container-fluid mt-5 col-lg-4 col-md-6">
 						<div class="card-header" style="background-color:#C1CE8E;">
-							<h4 class="center"><strong>To do (<span id="to-do-tasks-count">5</span>)</strong></h4>
+							<h4 class="center"><strong>To do </strong></h4>
+							<!-- (<span id="to-do-tasks-count">5</span>) -->
 						</div>
 						<div class="container list-group list-group-flush p-2 rounded-2"  style="background-color:#E6EEC7;" id="to-do-tasks">
 							<!-- TO DO TASKS HERE -->
-							<button class="card  d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2 border rounded-2 mb-2 cart shadow-sm" >
+							<!-- <button class="card  d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2 border rounded-2 mb-2 cart shadow-sm" >
 								<div class="">
 									<i class="bi bi-question-circle fs-3"></i>
 								</div>
@@ -188,7 +191,7 @@
 										<span class="btn btn-white bg-white p-2 text-black bug ">feature</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 
 					</div>
 				</div>
@@ -199,7 +202,7 @@
 						</div>
 						<div class="contenaire container list-group list-group-flush p-2 rounded-2 border" id="in-progress-tasks" style="background-color:#E7EADA;">
 							<!-- IN PROGRESS TASKS HERE -->
-							<button class="card cart d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2  border rounded-2  mb-2 shadow-sm">
+							<!-- <button class="card cart d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2  border rounded-2  mb-2 shadow-sm">
 								<div class="">
 									<i class="spinner-border spinner-border-sm text-green me-1"></i>
 								</div>
@@ -262,17 +265,18 @@
 										<span class="btn btn-white bg-white p-2 mx-2 text-black w-100 bug">bug</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 
 					<div class="container-fluid mt-5 col-lg-4 col-md-6">
 						<div class="card-header" style="background-color:#DFE8CC;">
-							<h4 class="center"> <strong> Done (<span id="done-tasks-count">4</span>) </strong></h4>
+							<h4 class="center"> <strong> Done  </strong></h4>
+							(<span id="done-tasks-count">4</span>)
 						</div>
 						<div class="contenaire container list-group list-group-flush p-2 rounded-2" id="done-tasks" style="background-color:#E9ECE1;">
 							<!-- DONE TASKS HERE -->
-							<button class="card cart d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2 border rounded-2 shadow-sm mb-2">
+							<!-- <button class="card cart d-flex flex-row justify-content-around align-items-center border-bottom border-muted p-2 border rounded-2 shadow-sm mb-2">
 								<div class="">
 									<i class="bi bi-check2-square fs-3"></i>
 								</div>
@@ -335,7 +339,7 @@
 										<span class="btn btn-white bg-white p-2 mx-2 text-black w-100 bug">bug</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 			</div>
@@ -355,9 +359,11 @@
 	</div>
 	
 	<!-- ================== BEGIN core-js ================== -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="assets/js/vendor.min.js"></script>
 	<script src="assets/js/app.min.js"></script>
-	<script src="assets/js/data.js"></script>
+	<script src="assets/js/data.js" ></script>
+	<script src="assets/js/app.js" ></script>
     <!-- Popper.js, then Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
