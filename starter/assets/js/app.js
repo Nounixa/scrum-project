@@ -83,7 +83,6 @@ if(tasks[i].status=='Done'){
 }
 }
 }
-
 afficher();
 const form = document.getElementById('first');//call our form with the id assigned to it 
 
@@ -122,14 +121,14 @@ function saveTask(event) {
     // refresh tasks
     //  document.forms[0].reset();//to clean the form for the next entries
     //   // backtext
-    Swal.fire(
+    afficher();
+      $('#Modal').modal('hide');
+      Swal.fire(
         'Good job!',
         'You clicked the button!',
         'success'
       )
-      $('#Modal').modal('hide');
     console.log(tasks);
-    afficher();
 }
 
 function editTask(index) {
@@ -148,7 +147,7 @@ function editTask(index) {
 
 function updateTask() {
     // GET TASK ATTRIBUTES FROM INPUTS
-
+     
     // Créez task object
 
     // Remplacer ancienne task par nouvelle task
@@ -196,4 +195,4 @@ function radiocheck() {
 // array is an object.
 // object has no index so we can't acces it data with a loop. 
 // querySelector fetch the first element that has the same name or id or class.
-// 
+// document.createlement()/classname.classList.add/.append(classname)/classname.style.backgroundColor=""/.setAttribute('','')
