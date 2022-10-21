@@ -35,9 +35,9 @@
 					</h1>
 					<!-- END page-header -->
 				</div>
-				
-				<div class="">
-					<button type="button" class="btn high text-white p-2 rounded-4 " data-toggle="modal" data-target="#Modal"><i class="bi bi-plus"></i> Add Task</button>
+					<div id="addTask-div">
+						<button id="addTask" type="submit" class="btn high text-white p-2 rounded-4 "><i class="bi bi-plus" ></i> Add Task</button>
+					</div>
 					<div class="modal shadow-sm" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 						  <div class="modal-content">
@@ -64,7 +64,6 @@
 							</br>
 								<label for="propriete" class="d-block">propriete:</label>
 								<select class="form-select form-select-sm m-1 cart shadow-sm" name="priority" id="priority" >
-									<option value="1" selected>----please select----</option>
 									<option value="High">high</option>
 									<option value="Medium">medium</option>
 									<option value="Easy">simple</option>
@@ -72,7 +71,6 @@
 							</br>
 								<label for="status" class="d-block">status:</label>
 								<select class="form-select form-select-sm m-1 cart shadow-sm" name="status" id="status" required>
-									<option value="1" selected>----please select----</option>
 									<option value="To Do">to do</option>
 									<option value="In Progress">in progress</option>
 									<option value="Done">done</option>
@@ -83,17 +81,15 @@
 							</br>
 								<label for="description" class="d-block" >description:</label>
 								<textarea class="form-control m-1 cart shadow-sm" id="description" name="description" rows="5" cols="33">description...</textarea>
-								<div class="modal-footer modal_body">
+								<div class="modal-footer modal_body" id="button">
 									<button type="button" class="btn bug shadow-sm" data-dismiss="modal">Close</button>
-									<button type="submit" id="hide" class="btn high shadow-sm" >Save changes</button>
+									<button type="submit" id="hide" class="btn high shadow-sm " >Save changes</button>
 								  </div>
 							  </form>
 							</div>
-
 						  </div>
 						</div>
 					  </div>
-				</div>
 			</div>
 			
 			<div class="d-flex flex-wrap justify-content-around  ">

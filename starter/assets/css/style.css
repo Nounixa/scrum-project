@@ -43,3 +43,11 @@ li a:active{
 .modal_body{
     background-color: #E9ECE1;
 }
+
+.btn-hide{
+    visibility: hidden;
+}
+
+.btn-visible{
+    visibility: visible;
+}

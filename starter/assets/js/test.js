@@ -192,6 +192,6 @@ function reloadTasks() {
 
 // let only work in a specifique scop not like var that's the difference between this two.
 // array is an object.
-// object has no index so we can't acces it data with a loop.
+// object has no index so we can't acces it data with a loop. 
 // querySelector fetch the first element that has the same name or id or class.
-//
+// document.createlement()/classname.classList.add/.append(classname)/classname.style.backgroundColor=""/.setAttribute('','')
