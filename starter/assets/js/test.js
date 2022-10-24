@@ -195,3 +195,18 @@ function reloadTasks() {
 // object has no index so we can't acces it data with a loop. 
 // querySelector fetch the first element that has the same name or id or class.
 // document.createlement()/classname.classList.add/.append(classname)/classname.style.backgroundColor=""/.setAttribute('','')
+
+
+function dragitem(){
+  let items=document.querySelectorAll('.card');
+  items.forEach(item=>{
+        item.addEventListener('dragstart',function(){
+          drag=item;
+          item.style.opacity='0.5';
+        })
+        item.addEventListener('dragend', function(){
+          drag=null;
+          item.style.opacity='0.5';
+        })
+  })
+}

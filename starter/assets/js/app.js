@@ -207,7 +207,11 @@ function deleteTask(i) {
 
   // Remove task from array by index splice function
   tasks.splice(i, 1);
-  Swal.fire("Delete!", "You're task is deleted successfully !", "success");
+  Swal.fire(
+    'Delete!', 
+    'You re task is deleted successfully !',
+    'success'
+    );
   // refresh tasks
   afficher();
 }
